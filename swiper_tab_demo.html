@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>swiper dmeo</title>
+	<link rel="stylesheet" type="text/css" href="http://hf.jysgcd.com/App/Tpl/Home/Default/Public/adymilk/css/index.css">
+	<link rel="stylesheet" type="text/css" href="http://0551shengteng.com/static/front/comm/css/swiper-4.4.6.min.css">
+	<link rel="stylesheet" type="text/css" href="http://0551shengteng.com/static/front/pc/css/index_new.css?a=11244566">
+	<script type="text/javascript" src="http://0551shengteng.com/static/front/comm/js/1.7.2.jquery.min.js"></script>
+	<script type="text/javascript" src="http://0551shengteng.com/static/front/comm/js/swiper-4.4.6.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<style type="text/css">
+		.sec3-slider-ctrl{
+			width: 100%;
+		    padding: 0;
+		    margin: 0;
+		    position: fixed;
+		    z-index: 999999;
+		    top: 0;
+		    background-color: #fff;
+		}
+		.sec3-slider-ctrl li{
+			width: 24%;
+		    display: block;
+		    float: left;
+		    line-height: 80px;
+		    height: 80px;
+		}
+		.sec3-slider{
+			width: 100%;
+			height: auto;
+			margin-top: 60px;
+		}
+		.sec3-slider-ctrl li a{
+			font-size: 1.3rem;
+			line-height: 80px;
+		    height: 80px;
+		}
+	</style>
+</head>
+<body>
+<div class="sec3-content">
+  <ul class="sec3-slider-ctrl">
+    <li class="active">
+      <a>新闻</a>
+    </li>
+    <li class="">
+      <a>餐厅</a>
+    </li>
+    <li class="">
+      <a>书房</a>
+    </li>
+    <li class="">
+      <a>卧室</a>
+    </li>
+
+  </ul>
+  <div class="sec3-slider">
+    <div class="swiper-container sec3-swiper swiper-container-horizontal">
+      <div class="swiper-wrapper" style="transform: translate3d(-5320px, 0px, 0px); transition-duration: 0ms;">
+        <div class="swiper-slide" style="width: 1330px;">
+          
+          <img class="swiper-lazy swiper-lazy-loaded" width="100%" src="https://imgsa.baidu.com/news/q%3D100/sign=ad88b01ea0c379317b688229dbc5b784/10dfa9ec8a136327b7a8b02b9e8fa0ec08fac765.jpg" />
+          <div style="font-size: 2rem;">用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库用户上传一个 Excel 数据表，系统返回当前数据表中的人名是否存在 ERP 数据库中。考虑到数据库安全问题，不能直接操作原始数据库</div>
+          <img class="swiper-lazy swiper-lazy-loaded" width="100%" src="https://imgsa.baidu.com/news/q%3D100/sign=ad88b01ea0c379317b688229dbc5b784/10dfa9ec8a136327b7a8b02b9e8fa0ec08fac765.jpg" />
+      </div>
+        <div class="swiper-slide" style="width: 1330px;">
+          
+          <img class="swiper-lazy swiper-lazy-loaded" width="100%" src="http://0551shengteng.com/static/front/pc/img/index/ct.png?a=1" /></div>
+        <div class="swiper-slide" style="width: 1330px;">
+          
+          <img class="swiper-lazy swiper-lazy-loaded" width="100%" src="http://0551shengteng.com/static/front/pc/img/index/sf.png?a=1" /></div>
+        <div class="swiper-slide swiper-slide-prev" style="width: 1330px;">
+          
+          <img class="swiper-lazy swiper-lazy-loaded" width="100%" src="http://0551shengteng.com/static/front/pc/img/index/ws.png?a=1" />
+
+
+
+      </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="http://0551shengteng.com/static/front/comm/js/bootstrap-slider.min.js"></script>
+
+<script>
+    $('.sec3-slider-ctrl li').click(function () {
+            var i = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $(".img_section li").eq(i).addClass('active').siblings().removeClass('active');
+            $('.sec3-swiper .swiper-wrapper .swiper-slide').eq(i).css("height","auto");
+            $('.sec3-swiper .swiper-wrapper .swiper-slide').eq(i).siblings().css("height","0");
+            sec3_swiper.slideTo(i);
+        });
+        var sec3_swiper =  new Swiper('.sec3-swiper',{
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChangeTransitionEnd: function(){
+                    var i = this.activeIndex;
+                    $('.sec3-slider-ctrl li').eq(i).addClass('active').siblings().removeClass('active');
+                    $(".img_section li").eq(i).addClass('active').siblings().removeClass('active');
+                    $('.sec3-swiper .swiper-wrapper .swiper-slide').eq(i).css("height","auto");
+            		$('.sec3-swiper .swiper-wrapper .swiper-slide').eq(i).siblings().css("height","0");
+                },
+            },
+        });
+</script>
+</body>
+</html>
